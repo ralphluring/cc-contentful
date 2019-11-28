@@ -1,0 +1,72 @@
+.posts{
+    list-style: none;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.post{
+    display:grid;
+    background-color: antiquewhite;
+    width: 100%;
+    padding: 1rem;
+    a {
+        color:#000;
+        display:block;
+        text-decoration:none;
+    }
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-size: 1rem;
+
+}
+
+.details{
+    margin-top:.2rem;
+  display:flex;
+  justify-content: space-around;
+}
+
+.blogrollheader{
+    text-align: center;
+    h4{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+}
+
+.author{
+    margin:0;
+    padding:0;
+    font-size: .9rem;
+}
+
+.bio{
+    margin:0;
+    padding:0;
+    font-size: .6rem;
+}
+
+.datelink{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.date{
+    margin:0;
+    padding:0;
+    font-size: .6rem;
+}
+
+.link{
+    margin:0;
+    padding:0;
+    font-size: 1rem;
+    font-weight: bold;
+}

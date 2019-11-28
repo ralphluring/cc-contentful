@@ -1,0 +1,31 @@
+.retailrecent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    background-color: aquamarine;
+}
+
+.retailrecent div{
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+}
+
+.retailrecent div ul li{
+   margin:0;
+}
+.retailrecent div p{
+   margin:0;
+}
+.retailrecent div ul{
+   margin-bottom:0;
+}
+
+.retailrecentimages{
+    width:50px;
+}
+
+.storelogo{
+    width:100px;
+}
+
+#mapid { height: 180px; }

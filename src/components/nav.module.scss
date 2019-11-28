@@ -1,0 +1,31 @@
+.container{
+  
+}
+
+.list{
+    list-style: none;
+    margin: 0;
+    padding:10px;
+}
+
+.listItem{
+    text-align: center;
+    border:.5px solid #000;
+    background-color:#D9D979;
+}
+
+.link{
+    text-decoration:none;
+    color:#525246;
+    width: 100%;
+}
+
+.active{  
+    text-decoration: none;
+    color:#9E9E88;
+}
+
+.navclose{
+    border:.5px solid #000;
+    background: none;
+}

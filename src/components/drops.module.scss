@@ -1,0 +1,65 @@
+.container{
+    background-color: #9E9E88;
+    display: grid;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    border-bottom: 3px solid #000;
+
+}
+
+.logo img{
+    width:40%;
+}
+
+.drop{
+    margin-top:1rem;
+    border-bottom: 3px solid #000;
+    display:grid;
+
+    p{
+        padding:0;
+        margin: 10px 0px;
+        line-height: 1rem;
+       text-align-last: center;
+        font-size: 1.3rem;
+        
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    h4{
+        font-size: 1.3rem;
+    }
+
+    h1{
+        text-align: center;
+    }
+}
+
+.datenstore{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.namelogo{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.storelogo{
+ 
+    margin: 0;
+}
+
+
+#container { height: 180px; }
