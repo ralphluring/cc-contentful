@@ -5,7 +5,7 @@ import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import '../styles/index.scss'
 import LayoutStyles from '../components/layout.module.scss'
 import Head from '../components/head'
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
+import { Disqus} from 'gatsby-plugin-disqus'
 
 export const query = graphql`
 query($slug:String!){

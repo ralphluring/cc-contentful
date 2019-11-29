@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, graphql, useStaticQuery} from 'gatsby'
+import {graphql, useStaticQuery} from 'gatsby'
 import dropStyles from './drops.module.scss'
 import Dropmap from '../components/dropmap'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
@@ -79,8 +79,9 @@ const Drops = () => {
                     )
                 })}
         </div>
-          
-          <Dropmap />
+        // Wrap the require in check for window
+  {typeof window !== `undefined` ?  <Dropmap /> : null}}
+         
       </div>
     )
 

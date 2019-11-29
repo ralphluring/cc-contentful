@@ -3,7 +3,7 @@ import {Link} from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
-const NotFound = () => {
+const NotFound = (props) => {
     return(
         <Layout>
             <Head title="404"/>

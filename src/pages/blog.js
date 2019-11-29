@@ -3,9 +3,9 @@ import Layout from '../components/layout'
 import {Link, graphql,useStaticQuery} from 'gatsby'
 import blogStyles from './blog.module.scss'
 import Head from '../components/head'
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
 
-const BlogPage = () => {
+
+const BlogPage = (props) => {
 
     const data = useStaticQuery(graphql`
     

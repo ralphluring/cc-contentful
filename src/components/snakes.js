@@ -10,7 +10,7 @@ const Snakes = () => {
     query {
         file(relativePath: { eq: "images/cc_logo_mobile-01.png" }) {
             childImageSharp {
-                fixed(width:150) {
+                fixed(width:100) {
                 ...GatsbyImageSharpFixed
                 }
             }

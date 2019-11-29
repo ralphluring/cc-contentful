@@ -1,20 +1,10 @@
 import React from 'react'
-import { bool } from 'prop-types';
-import {Link,graphql,useStaticQuery} from 'gatsby'
+import {Link} from 'gatsby'
 import navStyles from './nav.module.scss'
 
 const Nav = ({open,setOpen}) => {
 
-    const data = useStaticQuery(graphql`
 
-    query  {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-    }
-    `)
   
         return (
         

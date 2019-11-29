@@ -2,12 +2,11 @@ import React from 'react'
 import Layout from '../components/layout'
 import {Link, graphql, useStaticQuery} from 'gatsby'
 import blogStyles from './blog.module.scss'
-import homeStyles from './home.module.scss'
 import Head from '../components/head'
 import Drops from '../components/drops'
-import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 
-const IndexPage = () => {
+
+const IndexPage = (props) => {
    
     const data = useStaticQuery(graphql` 
     query {
