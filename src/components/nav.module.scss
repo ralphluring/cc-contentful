@@ -10,22 +10,28 @@
 
 .listItem{
     text-align: center;
-    border:.5px solid #000;
-    background-color:#D9D979;
+    background-color:#4D4D4D;
+    border-radius: 20px;
+   
 }
 
 .link{
     text-decoration:none;
-    color:#525246;
+    color:#DBD6C5;
     width: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .active{  
     text-decoration: none;
-    color:#9E9E88;
+    color:aquamarine;
 }
 
 .navclose{
-    border:.5px solid #000;
-    background: none;
+    border-radius: 20px;
+    background-color:#4D4D4D;
+    color: aquamarine;
+    border:none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }

@@ -8,7 +8,7 @@ const Snakes = () => {
     const data = useStaticQuery(graphql`
 
     query {
-        file(relativePath: { eq: "images/cc_logo_mobile-01.png" }) {
+        file(relativePath: { eq: "images/cc_logo_mobileweb-01.png" }) {
             childImageSharp {
                 fixed(width:100) {
                 ...GatsbyImageSharpFixed
@@ -26,7 +26,7 @@ const Snakes = () => {
             <Img
                 className={snakeStyles.logo}
                 fixed={data.file.childImageSharp.fixed}
-                alt="Gatsby Docs are awesome"
+                alt="snakes"
             /> 
             </Link>
         </div>

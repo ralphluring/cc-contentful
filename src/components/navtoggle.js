@@ -7,7 +7,7 @@ import { bool, func } from 'prop-types';
 const Navtoggle = ({open, setOpen})  => {
   return (
     <div className={toggleStyles.container}>
-      <button open={open} onClick={() => setOpen(!open)}>Menu</button>
+      <button className={toggleStyles.button} open={open} onClick={() => setOpen(!open)}>Menu</button>
     </div>
   )
 }

@@ -2,14 +2,14 @@ import React from 'react'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
-const AboutPage = (props) => {
+const retailers = (props) => {
     return (
        <Layout>
-           <Head title="About"/>
-           <h1>About</h1>
+           <Head title="Events"/>
+           <h1>Retailers</h1>
         </Layout>
  
     )
 }
 
-export default AboutPage;
+export default retailers;

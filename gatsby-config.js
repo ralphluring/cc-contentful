@@ -6,9 +6,21 @@ module.exports = {
 
   plugins:[
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#6b37bf`,
+        theme_color: `#6b37bf`,
+        display: `standalone`,
+        icon: `src/images/icon.png`
+      },
+    },
+    {
       resolve: 'gatsby-plugin-react-leaflet',
       options: {
-        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+        linkStyles: true 
       }
     },
     {

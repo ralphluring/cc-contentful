@@ -42,12 +42,15 @@ const IndexPage = (props) => {
                         
                         <li className={blogStyles.post}>
 
-                            <div >
-                                <Link to ={`/blog/${edge.node.slug}`}>
+                            <div  >
+                                <Link  className={blogStyles.posttitle} to ={`/blog/${edge.node.slug}`}>
                                 {edge.node.title}
                                 </Link>
+                                <div className={blogStyles.dateauthor}>
                                 <p>{edge.node.publishDate}</p>
-                                <p>{edge.node.author.name}</p>
+                                <p>by {edge.node.author.name}</p>
+                                </div>
+                                
                                 
                                 <p>{edge.node.body.json.content[0].content[0].value}</p>   
 
