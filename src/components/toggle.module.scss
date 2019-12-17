@@ -1,18 +1,17 @@
-.container{
-    background-color: #4D4D4D;
-    border-radius:20px;
-    padding: .2rem;
-    display:grid;
-    margin: 1rem;
-    
+.container {
+  background-color: #000;
+  border-radius: 20px;
+  padding: 0.2rem;
+  display: grid;
+  margin: 1rem;
 }
 
-.container:hover{
-    background-color: green;
+.container:hover {
+  background-color: green;
 }
 
-.button{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:1.3rem;
-    color:#DBD6C5;
+.button {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3rem;
+  color: #dbd6c5;
 }

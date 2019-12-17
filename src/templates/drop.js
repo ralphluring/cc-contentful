@@ -3,12 +3,12 @@ import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import '../styles/index.scss'
-import LayoutStyles from '../components/layout.module.scss'
+
 import Head from '../components/head'
 
 export const query = graphql`
     query($slug:String!){
-        contentfulRetailerStock(slug: {eq: $slug}) {
+        contentfulDrop(slug: {eq: $slug}) {
             updatedAt
             slug
             storeName
@@ -22,10 +22,10 @@ const Drop = (props) => {
 
   return (
     <Layout>
-      <Head title ={props.data.contentfulRetailerStock.storeName}/>
-      <h1 >{props.data.contentfulRetailerStock.storeName}</h1>
+      <Head title ={props.data.contentfulDrop.storeName}/>
+      <h1 >{props.data.contentfulDrop.storeName}</h1>
       
-      {documentToReactComponents(props.data.contentfulRetailerStock.productsInStock.json)}
+      {documentToReactComponents(props.data.contentfulDrop.productsInStock.json)}
     </Layout>
   )
 

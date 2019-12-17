@@ -1,13 +1,17 @@
-import React from 'react'
-import toggleStyles from './toggle.module.scss'
-import { bool, func } from 'prop-types';
+import React from "react"
+import toggleStyles from "./toggle.module.scss"
+import { bool, func } from "prop-types"
 
-
-
-const Navtoggle = ({open, setOpen})  => {
+const Navtoggle = ({ open, setOpen }) => {
   return (
     <div className={toggleStyles.container}>
-      <button className={toggleStyles.button} open={open} onClick={() => setOpen(!open)}>Menu</button>
+      <button
+        className={toggleStyles.button}
+        open={open}
+        onClick={() => setOpen(!open)}
+      >
+        Menu
+      </button>
     </div>
   )
 }
@@ -15,6 +19,6 @@ const Navtoggle = ({open, setOpen})  => {
 Navtoggle.propTypes = {
   open: bool.isRequired,
   setOpen: func.isRequired,
-};
-  
+}
+
 export default Navtoggle

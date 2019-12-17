@@ -9,7 +9,7 @@ const Dropmap = () => {
   
   const data = useStaticQuery(graphql` 
     query {
-        allContentfulRetailerStock {
+        allContentfulDrop {
             edges {
                 node {
                     storeName
@@ -38,7 +38,7 @@ const Dropmap = () => {
         />
 
 
-        {data.allContentfulRetailerStock.edges.map(edge => {
+        {data.allContentfulDrop.edges.map(edge => {
           return(
               <Marker position={edge.node.storeLocation}>
               <Popup>
