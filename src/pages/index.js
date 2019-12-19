@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import Drops from "../components/drops"
 import Blogroll from "../components/blogroll"
-import Headerimg from "../components/Headerimg"
+import Headerimg from "../components/headerimg"
 const IndexPage = props => {
   return (
     <>
