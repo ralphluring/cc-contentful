@@ -1,3 +1,10 @@
-.container{
-    margin: 1rem;
+.container {
+  margin: 1rem;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+
+  p {
+    margin: 1px;
+  }
 }
