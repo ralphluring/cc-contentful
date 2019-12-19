@@ -1,61 +1,54 @@
-
-import React, { } from 'react'
-import {graphql, useStaticQuery} from 'gatsby'
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-import dropmapStyles from './dropmapStyles.module.scss'
-
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import { Map, TileLayer, Marker, Popup } from "react-leaflet"
+import dropmapStyles from "./dropmapStyles.module.scss"
 
 const Dropmap = () => {
-  
-  const data = useStaticQuery(graphql` 
+  const data = useStaticQuery(graphql`
     query {
-        allContentfulDrop {
-            edges {
-                node {
-                    storeName
-                    storeLocation {
-                        lat
-                        lon
-                    }
-                }
+      allContentfulDrop {
+        edges {
+          node {
+            storeName
+            storeLocation {
+              lat
+              lon
             }
-            totalCount
+          }
         }
+        totalCount
+      }
     }
   `)
-   
-  const zoom = 7;
+
+  const zoom = 7
   // Wrap the require in check for window
   if (typeof window !== `undefined`) {
-
     return (
       <div className={dropmapStyles.dropmapcontainer}>
-        <h1 className={dropmapStyles.header}>Drop Map</h1>
-        <Map center={[47.6062,-122.3321]} zoom={zoom} className={dropmapStyles.container}>
-        <TileLayer
-          attribution='osm'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
+        <Map
+          center={[47.6062, -122.3321]}
+          zoom={zoom}
+          className={dropmapStyles.container}
+        >
+          <TileLayer
+            attribution="osm"
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
 
-
-        {data.allContentfulDrop.edges.map(edge => {
-          return(
+          {data.allContentfulDrop.edges.map(edge => {
+            return (
               <Marker position={edge.node.storeLocation}>
-              <Popup>
-                <h3>{edge.node.storeName}</h3>
-              </Popup>
-            </Marker>
-          )
-      
-        })}
-      </Map>
-    </div>
-  )
-   
+                <Popup>
+                  <h3>{edge.node.storeName}</h3>
+                </Popup>
+              </Marker>
+            )
+          })}
+        </Map>
+      </div>
+    )
   }
- 
-
-  
 }
 
 export default Dropmap

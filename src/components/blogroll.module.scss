@@ -1,8 +1,9 @@
 .container {
   margin: 1rem;
+}
+
+.posts {
   display: grid;
-  grid-template-columns: 1fr;
-  border: 1px solid red;
 }
 
 .blogrollheader h4 {
@@ -21,6 +22,14 @@ li {
   margin: 0;
 }
 
+p {
+  margin: 0.2rem 0rem;
+}
+
+a {
+  color: #000;
+}
+
 .posttitle {
   text-decoration: none;
   color: #000;
@@ -30,15 +39,24 @@ li {
 .post {
   display: flex;
   border: 1px solid black;
+  padding: 1rem;
 }
 @media only screen and (min-width: 600px) {
   .post {
     max-width: 550px;
+  }
+
+  .posts {
+    display: flex;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .post {
     max-width: 750px;
+  }
+
+  .posts {
+    display: flex;
   }
 }
