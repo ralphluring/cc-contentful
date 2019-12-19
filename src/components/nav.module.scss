@@ -1,37 +1,36 @@
-.container{
+.container {
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.listItem {
+  text-align: center;
+}
+
+.link {
+  text-decoration: none;
+    color:#000;
+  width: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.active {
+  text-decoration: none;
+  color:darkslateblue;
+  font-weight: bold;
+}
+
+.navclose {
+    background: none;
+    border: 3px solid #000;
   
-}
 
-.list{
-    list-style: none;
-    margin: 0;
-    padding:10px;
-}
-
-.listItem{
-    text-align: center;
-    background-color:#4D4D4D;
-    border-radius: 20px;
-   
-}
-
-.link{
-    text-decoration:none;
-    color:#DBD6C5;
-    width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.active{  
-    text-decoration: none;
-    color:aquamarine;
-}
-
-.navclose{
-    border-radius: 20px;
-    background-color:#4D4D4D;
-    color: aquamarine;
-    border:none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+    font-weight: bolder;
 }
