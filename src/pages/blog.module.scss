@@ -1,53 +1,50 @@
-.posts{
-    list-style: none;
-    margin: 0;
-    font-family: 'Nunito', sans-serif;
+.posts {
+  list-style: none;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
 }
 
-.post{
-    display:grid;
-    background-color: #B8942A;
-    width: 100%;
-    padding: 1rem;
+.post {
+  display: grid;
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid black;
+  padding: 1rem;
+  margin: 1rem;
 
-    a {
-        color:#000;
-        display:block;
-        text-decoration:none;
-        font-weight: bold;
-        text-align: center;
-    }
-
-    .dateauthor{
-        display: flex;
-        justify-content: space-around;
-        font-size: .8rem;
-    }
-}
-
-.posttitle{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    font-size: 1.2rem;
-    padding-bottom: 1rem;
-}
-
-
-
-
-
-.blogrollheader{
+  a {
+    color: #000;
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
     text-align: center;
-    h4{
-        font-size: 1.5rem;
-        margin-top: 1rem;
-    }
-    
+    padding: 0;
+    margin: 0;
+  }
+
+  h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .dateauthor {
+    display: flex;
+    justify-content: space-around;
+    font-size: 0.8rem;
+  }
 }
 
+.posttitle {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+}
 
-
-
-
-
-
-
+.blogrollheader {
+  text-align: center;
+  h4 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+}
