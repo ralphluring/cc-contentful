@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import headerimgStyles from "./headerimgStyles.module.scss"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const Headerimg = () => {
   const data = useStaticQuery(graphql`

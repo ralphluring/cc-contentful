@@ -13,6 +13,11 @@ const Shopage = props => {
             title
             slug
             description
+            picture {
+              fluid {
+                srcSet
+              }
+            }
           }
         }
       }

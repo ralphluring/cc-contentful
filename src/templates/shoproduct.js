@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import "../styles/index.scss"
 import Head from "../components/head"
@@ -25,6 +25,10 @@ export const query = graphql`
   }
 `
 const Shoproduct = props => {
+  let pdf
+  props.data.contentfulShoProduct.coa
+    ? (pdf = props.data.contentfulShoProduct.coa.file.url)
+    : (pdf = null)
   return (
     <Layout>
       <Head title={props.data.contentfulShoProduct.title} />
@@ -35,7 +39,9 @@ const Shoproduct = props => {
       />
       <p>{props.data.contentfulShoProduct.description}</p>
 
-      <img src={props.data.contentfulShoProduct.coa.file.url} />
+      <a href={pdf} target="_blank" rel="noopener noreferrer">
+        Download coa
+      </a>
     </Layout>
   )
 }
