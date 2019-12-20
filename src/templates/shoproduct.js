@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import "../styles/index.scss"
 import Head from "../components/head"
+import shoproductStyles from "./shoproductStyles.module.scss"
 
 export const query = graphql`
   query($slug: String!) {
@@ -33,15 +33,22 @@ const Shoproduct = props => {
     <Layout>
       <Head title={props.data.contentfulShoProduct.title} />
       <h1>{props.data.contentfulShoProduct.title}</h1>
-      <img
-        src={props.data.contentfulShoProduct.picture.fluid.src}
-        alt="product iamge"
-      />
-      <p>{props.data.contentfulShoProduct.description}</p>
+      <div className={shoproductStyles.container}>
+        <div className={shoproductStyles.image}>
+          <img
+            src={props.data.contentfulShoProduct.picture.fluid.src}
+            alt="product iamge"
+          />
+        </div>
 
-      <a href={pdf} target="_blank" rel="noopener noreferrer">
-        Download coa
-      </a>
+        <div className={shoproductStyles.description}>
+          <p>{props.data.contentfulShoProduct.description}</p>
+
+          <a href={pdf} target="_blank" rel="noopener noreferrer">
+            Download coa
+          </a>
+        </div>
+      </div>
     </Layout>
   )
 }
