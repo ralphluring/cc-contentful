@@ -34,6 +34,8 @@ const Shoproduct = props => {
         alt="product iamge"
       />
       <p>{props.data.contentfulShoProduct.description}</p>
+
+      <img src={props.data.contentfulShoProduct.coa.file.url} />
     </Layout>
   )
 }

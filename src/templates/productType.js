@@ -25,8 +25,6 @@ const ProductTypePage = props => {
       <Head title={props.data.contentfulProductType.title} />
       <h1>{props.data.contentfulProductType.title}</h1>
 
-      <h3>SHO</h3>
-
       {props.data.allContentfulShoProduct.edges.map(edge => {
         return (
           <div>

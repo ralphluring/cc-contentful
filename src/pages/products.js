@@ -8,7 +8,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 const ProductsPage = props => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulProductType(sort: { fields: updatedAt }) {
+      allContentfulProductType {
         edges {
           node {
             slug
@@ -33,15 +33,20 @@ const ProductsPage = props => {
       <div className={productspageStyles.container}>
         {data.allContentfulProductType.edges.map(edge => {
           return (
-            <div>
-              <img src={edge.node.picture.fluid.src} alt="productimage"></img>
-              {documentToReactComponents(edge.node.description.json)}
-              <Link
-                className={productspageStyles.link}
-                to={`/products/${edge.node.slug}`}
-              >
-                {edge.node.title}
-              </Link>
+            <div className={productspageStyles.product}>
+              <div className={productspageStyles.picture}>
+                <img src={edge.node.picture.fluid.src} alt="productimage"></img>
+              </div>
+              <div className={productspageStyles.description}>
+                {documentToReactComponents(edge.node.description.json)}
+
+                <Link
+                  className={productspageStyles.link}
+                  to={`/products/${edge.node.slug}`}
+                >
+                  <p>{edge.node.title} Menu</p>
+                </Link>
+              </div>
             </div>
           )
         })}

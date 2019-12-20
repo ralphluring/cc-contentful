@@ -59,20 +59,7 @@ const Nav = ({ open, setOpen }) => {
           Merch
         </a>
       </li>
-      <li className={navStyles.listItem}>
-        <Link
-          class={navStyles.link}
-          activeClassName={navStyles.active}
-          to="/retailers"
-        >
-          Info for Retailers
-        </Link>
-      </li>
-      <li className={navStyles.listItem}>
-        <Link class={navStyles.link} to="/consulting">
-          Consulting
-        </Link>
-      </li>
+
       <li>
         <button
           className={navStyles.navclose}
