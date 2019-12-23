@@ -55,7 +55,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const shoproduct = path.resolve("./src/templates/shoproduct.js")
   const vapeproduct = path.resolve("./src/templates/vapeproduct.js")
   const flowerproduct = path.resolve("./src/templates/flowerproduct.js")
-  const prerollproduct = path.resolve("./src/templates/preRollproduct.js")
+  const prerollproduct = path.resolve("./src/templates/prerollproduct.js")
 
   res.data.allContentfulBlogPost.edges.forEach(edge => {
     createPage({
