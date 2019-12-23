@@ -2,25 +2,42 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Layout from "../components/layout"
 import productspageStyles from "./productspageStyles.module.scss"
-import Head from "../components/head"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import Head from "../components/head"
 
-const ProductsPage = props => {
+const ProductsPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulProductType {
-        edges {
-          node {
-            slug
-            title
-            picture {
-              fluid {
-                src
-              }
-            }
-            description {
-              json
-            }
+      prerolls: contentfulProductType(slug: { eq: "prerolls" }) {
+        title
+        description {
+          json
+        }
+        picture {
+          fluid {
+            src
+          }
+        }
+      }
+      solventless: contentfulProductType(slug: { eq: "solventless" }) {
+        title
+        description {
+          json
+        }
+        picture {
+          fluid {
+            src
+          }
+        }
+      }
+      flower: contentfulProductType(slug: { eq: "flower" }) {
+        title
+        description {
+          json
+        }
+        picture {
+          fluid {
+            src
           }
         }
       }
@@ -31,25 +48,39 @@ const ProductsPage = props => {
     <Layout>
       <Head title="Products" />
       <div className={productspageStyles.container}>
-        {data.allContentfulProductType.edges.map(edge => {
-          return (
-            <div className={productspageStyles.product}>
-              <div className={productspageStyles.picture}>
-                <img src={edge.node.picture.fluid.src} alt="productimage"></img>
-              </div>
-              <div className={productspageStyles.description}>
-                {documentToReactComponents(edge.node.description.json)}
+        <div className={productspageStyles.solventless}>
+          <div className={productspageStyles.titleandmenulink}>
+            <h1>{data.solventless.title}</h1>
+            <Link to="/solventless" className={productspageStyles.link}>
+              See Menu
+            </Link>
+          </div>
 
-                <Link
-                  className={productspageStyles.link}
-                  to={`/products/${edge.node.slug}`}
-                >
-                  <p>{edge.node.title} Menu</p>
-                </Link>
-              </div>
-            </div>
-          )
-        })}
+          <img src={data.solventless.picture.fluid.src} alt="solventless" />
+          {documentToReactComponents(data.solventless.description.json)}
+        </div>
+        <div className={productspageStyles.flower}>
+          <div className={productspageStyles.titleandmenulink}>
+            <h1>{data.flower.title}</h1>
+            <Link to="/flower" className={productspageStyles.link}>
+              See Menu
+            </Link>
+          </div>
+
+          <img src={data.flower.picture.fluid.src} alt="flower" />
+          {documentToReactComponents(data.flower.description.json)}
+        </div>
+        <div className={productspageStyles.prerolls}>
+          <div className={productspageStyles.titleandmenulink}>
+            <h1> {data.prerolls.title}</h1>
+            <Link to="/prerolls" className={productspageStyles.link}>
+              See Menu
+            </Link>
+          </div>
+
+          <img src={data.prerolls.picture.fluid.src} alt="prerolls" />
+          {documentToReactComponents(data.prerolls.description.json)}
+        </div>
       </div>
     </Layout>
   )

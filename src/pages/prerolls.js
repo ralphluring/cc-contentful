@@ -1,30 +1,18 @@
 import React from "react"
 import Layout from "../components/layout"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import prerollpageStyles from "./prerollpage.module.scss"
 import Head from "../components/head"
 
-const Prerollpage = props => {
+const Prerollpage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulShoProduct {
+      allContentfulPreRollProduct {
         edges {
           node {
             title
             slug
-            description
           }
-        }
-      }
-      contentfulShoPage {
-        title
-        picture {
-          fluid {
-            src
-          }
-        }
-        description {
-          json
         }
       }
     }
@@ -32,9 +20,16 @@ const Prerollpage = props => {
 
   return (
     <Layout>
-      <Head title="Solventless Hash Oil" />
+      <Head title="Pre-rolls" />
       <div className={prerollpageStyles.container}>
-        <h1>{data.contentfulShoPage.title}</h1>
+        <div className={prerollpageStyles.header}>Pre-roll Menu</div>
+        {data.allContentfulPreRollProduct.edges.map(edge => {
+          return (
+            <div className={prerollpageStyles.productcard}>
+              <Link to={`prerolls/${edge.node.slug}`}>{edge.node.title}</Link>
+            </div>
+          )
+        })}
       </div>
     </Layout>
   )

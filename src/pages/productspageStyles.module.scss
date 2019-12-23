@@ -1,37 +1,31 @@
+// .container * {
+//   border: 1px solid blue;
+// }
 .container {
-  p {
-    margin: 1rem;
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-  }
-
-  a:hover {
-    cursor: pointer;
-    color: purple;
-  }
-
-  .description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .product {
-    margin: 1rem;
-  }
+  display: grid;
 }
 
-@media only screen and (min-width: 600px) {
-  .product {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+h1 {
+  padding: 0;
+  margin: 0;
 }
 
-@media only screen and (min-width: 900px) {
+.link {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.titleandmenulink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+p {
+  margin: 1rem;
 }

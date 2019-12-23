@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import "../styles/index.scss"
-import dropPageStyles from "./dropPageStyles.module.scss"
+import dropStyles from "./dropStyles.module.scss"
 
 import Head from "../components/head"
 
@@ -24,7 +24,7 @@ const Drop = props => {
     <Layout>
       <Head title={props.data.contentfulDrop.storeName} />
       <h1>{props.data.contentfulDrop.storeName}</h1>
-      <div className={dropPageStyles.container}>
+      <div className={dropStyles.container}>
         {documentToReactComponents(
           props.data.contentfulDrop.productsInStock.json
         )}

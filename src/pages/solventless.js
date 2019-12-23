@@ -1,35 +1,31 @@
 import React from "react"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
-import { graphql, useStaticQuery } from "gatsby"
-import shopageStyles from "./shopage.module.scss"
 import Head from "../components/head"
+import VapeProducts from "../components/vapeProducts"
+import solventlesssPageStyles from "./solventlessPageStyles.module.scss"
 
-const Shopage = props => {
+const SolventlessPage = props => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulShoProduct {
+      allContentfulShoProduct(sort: { fields: createdAt }) {
         edges {
           node {
             title
             slug
-            description
             picture {
               fluid {
-                srcSet
+                src
               }
             }
+            description
+            coa {
+              file {
+                url
+              }
+            }
+            createdAt
           }
-        }
-      }
-      contentfulShoPage {
-        title
-        picture {
-          fluid {
-            src
-          }
-        }
-        description {
-          json
         }
       }
     }
@@ -37,12 +33,26 @@ const Shopage = props => {
 
   return (
     <Layout>
-      <Head title="Solventless Hash Oil" />
-      <div className={shopageStyles.container}>
-        <h1>{data.contentfulShoPage.title}</h1>
+      <Head title="Solventless" />
+      <div className={solventlesssPageStyles.container}>
+        <div className={solventlesssPageStyles.header}>
+          <h1>Solventless Menu</h1>
+        </div>
+        <div className={solventlesssPageStyles.productcard}>
+          {data.allContentfulShoProduct.edges.map(edge => {
+            return (
+              <div>
+                <Link to={`/solventless/${edge.node.slug}`}>
+                  {edge.node.title}
+                </Link>
+              </div>
+            )
+          })}
+        </div>
+        <VapeProducts />
       </div>
     </Layout>
   )
 }
 
-export default Shopage
+export default SolventlessPage
