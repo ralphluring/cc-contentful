@@ -1,0 +1,12 @@
+.eventContainer {
+  border: 3px solid black;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  p {
+    padding: 0.2rem;
+    margin: 0;
+  }
+}

@@ -45,7 +45,11 @@ const Blogroll = () => {
                 </Link>
                 <div className={blogrollStyles.dateauthor}>
                   <p>{edge.node.publishDate}</p>
-                  <p>by {edge.node.author.name}</p>
+                  {edge.node.author.name ? (
+                    <p> by {edge.node.author.name}</p>
+                  ) : (
+                    <> </>
+                  )}
                 </div>
 
                 <p>{edge.node.body.json.content[0].content[0].value}</p>

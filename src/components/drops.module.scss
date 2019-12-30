@@ -9,8 +9,9 @@
 
 .header {
   display: flex;
-  justify-content: center;
-  margin-top: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0.5rem;
 
   h1 {
     font-size: 1.4rem;

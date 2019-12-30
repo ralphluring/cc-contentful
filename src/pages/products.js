@@ -55,8 +55,10 @@ const ProductsPage = () => {
               See Menu
             </Link>
           </div>
+          <div className={productspageStyles.picture}>
+            <img src={data.solventless.picture.fluid.src} alt="solventless" />
+          </div>
 
-          <img src={data.solventless.picture.fluid.src} alt="solventless" />
           {documentToReactComponents(data.solventless.description.json)}
         </div>
         <div className={productspageStyles.flower}>
@@ -66,8 +68,11 @@ const ProductsPage = () => {
               See Menu
             </Link>
           </div>
+          <div className={productspageStyles.picture}>
+            {" "}
+            <img src={data.flower.picture.fluid.src} alt="flower" />
+          </div>
 
-          <img src={data.flower.picture.fluid.src} alt="flower" />
           {documentToReactComponents(data.flower.description.json)}
         </div>
         <div className={productspageStyles.prerolls}>
@@ -77,8 +82,10 @@ const ProductsPage = () => {
               See Menu
             </Link>
           </div>
+          <div className={productspageStyles.picture}>
+            <img src={data.prerolls.picture.fluid.src} alt="prerolls" />
+          </div>
 
-          <img src={data.prerolls.picture.fluid.src} alt="prerolls" />
           {documentToReactComponents(data.prerolls.description.json)}
         </div>
       </div>

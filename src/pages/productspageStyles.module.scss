@@ -17,6 +17,7 @@ h1 {
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem;
+  margin: 1rem;
 }
 
 .titleandmenulink {
@@ -28,4 +29,23 @@ h1 {
 
 p {
   margin: 1rem;
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .titleandmenulink {
+    justify-content: center;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 900px) {
 }

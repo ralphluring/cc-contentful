@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 import dropStyles from "./drops.module.scss"
 import Dropmap from "../components/dropmap"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
@@ -43,7 +43,8 @@ const Drops = () => {
   return (
     <div className={dropStyles.container}>
       <div className={dropStyles.header}>
-        <h1>{data.allContentfulDrop.totalCount} Recent Drops</h1>
+        <h1>Recent Drops</h1>
+        <Link to="/drops">See All Drops</Link>
       </div>
 
       <div className={dropStyles.drops}>
