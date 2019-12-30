@@ -7,7 +7,7 @@ const Blogroll = () => {
     query {
       blog: allContentfulBlogPost(
         sort: { fields: publishDate, order: DESC }
-        limit: 3
+        limit: 2
       ) {
         edges {
           node {
@@ -46,7 +46,7 @@ const Blogroll = () => {
                 <div className={blogrollStyles.dateauthor}>
                   <p>{edge.node.publishDate}</p>
                   {edge.node.author.name ? (
-                    <p> by {edge.node.author.name}</p>
+                    <p>by {edge.node.author.name}</p>
                   ) : (
                     <> </>
                   )}

@@ -1,17 +1,13 @@
-.container {
+#container {
   height: 300px;
-  width: 80%;
-}
-
-.header {
 }
 
 @media only screen and (min-width: 600px) {
-  .container {
+  #container {
   }
 }
 
 @media only screen and (min-width: 900px) {
-  .container {
+  #contaner {
   }
 }

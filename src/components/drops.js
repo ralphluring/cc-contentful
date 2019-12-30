@@ -1,13 +1,12 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import dropStyles from "./drops.module.scss"
-import Dropmap from "../components/dropmap"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const Drops = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulDrop {
+      allContentfulDrop(limit: 4) {
         edges {
           node {
             dropDate(formatString: "MMMM DD")
@@ -75,7 +74,6 @@ const Drops = () => {
           )
         })}
       </div>
-      {typeof window !== `undefined` ? <Dropmap /> : null}
     </div>
   )
 }

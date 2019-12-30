@@ -2,8 +2,9 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import dropmapStyles from "./dropmapStyles.module.scss"
+import Head from "../components/head"
 
-const Dropmap = () => {
+const Dropmap = props => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulDrop {
@@ -21,15 +22,14 @@ const Dropmap = () => {
     }
   `)
 
-  const zoom = 7
-  // Wrap the require in check for window
   if (typeof window !== `undefined`) {
     return (
-      <div className={dropmapStyles.dropmapcontainer}>
+      <>
+        <Head />
         <Map
+          id={dropmapStyles.container}
           center={[47.6062, -122.3321]}
-          zoom={zoom}
-          className={dropmapStyles.container}
+          zoom={6}
         >
           <TileLayer
             attribution="osm"
@@ -38,7 +38,10 @@ const Dropmap = () => {
 
           {data.allContentfulDrop.edges.map(edge => {
             return (
-              <Marker position={edge.node.storeLocation}>
+              <Marker
+                className={dropmapStyles.marker}
+                position={edge.node.storeLocation}
+              >
                 <Popup>
                   <h3>{edge.node.storeName}</h3>
                 </Popup>
@@ -46,7 +49,7 @@ const Dropmap = () => {
             )
           })}
         </Map>
-      </div>
+      </>
     )
   }
 }
