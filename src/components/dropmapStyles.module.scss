@@ -1,13 +1,15 @@
-#container {
+.container {
   height: 300px;
 }
 
 @media only screen and (min-width: 600px) {
-  #container {
+  .container {
+    height: 400px;
   }
 }
 
 @media only screen and (min-width: 900px) {
-  #contaner {
+  .contaner {
+    height: 500px;
   }
 }

@@ -21,15 +21,15 @@ const Dropmap = props => {
       }
     }
   `)
-
+  const zoom = 6
   if (typeof window !== `undefined`) {
     return (
       <>
         <Head />
         <Map
-          id={dropmapStyles.container}
+          className={dropmapStyles.container}
           center={[47.6062, -122.3321]}
-          zoom={6}
+          zoom={zoom}
         >
           <TileLayer
             attribution="osm"
