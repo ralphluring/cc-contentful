@@ -21,7 +21,7 @@ const Dropmap = props => {
       }
     }
   `)
-  const zoom = 6
+  const zoom = 7
   if (typeof window !== `undefined`) {
     return (
       <>

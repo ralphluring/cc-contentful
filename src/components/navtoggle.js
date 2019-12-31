@@ -1,17 +1,16 @@
 import React from "react"
 import toggleStyles from "./toggle.module.scss"
 import { bool, func } from "prop-types"
+import { FaBars } from "react-icons/fa"
 
 const Navtoggle = ({ open, setOpen }) => {
   return (
     <div className={toggleStyles.container}>
-      <button
+      <FaBars
         className={toggleStyles.button}
         open={open}
         onClick={() => setOpen(!open)}
-      >
-        Menu
-      </button>
+      />
     </div>
   )
 }

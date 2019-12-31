@@ -13,7 +13,7 @@ const Blogroll = () => {
           node {
             id
             title
-            publishDate(formatString: "MMM-DD-YYYY")
+            publishDate(formatString: "MMMM DD YYYY")
             slug
             author {
               name

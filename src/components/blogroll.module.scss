@@ -1,5 +1,6 @@
 .container {
   margin: 1rem;
+  display: grid;
 }
 
 .posts {
@@ -40,7 +41,11 @@ a {
 
 .post {
   display: flex;
-  border: 3px solid black;
+
+  border-radius: 5px;
+
+  background-color: #fff;
+
   margin: 1rem;
   padding: 1rem;
 }

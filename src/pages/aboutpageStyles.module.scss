@@ -1,10 +1,12 @@
 .container {
   margin: 1rem;
-  max-width: 700px;
   display: grid;
+  align-content: center;
+  justify-items: center;
 
   p {
     margin: 1px;
     padding: 0.2rem;
+    max-width: 700px;
   }
 }
