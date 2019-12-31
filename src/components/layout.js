@@ -1,7 +1,8 @@
-import React, { useEffect } from "react"
+import React from "react"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import Agegate from "../components/agegate"
+import Social from "../components/social"
+import Signup from "../components/signup"
 import "../styles/index.scss"
 import LayoutStyles from "./layout.module.scss"
 
@@ -12,6 +13,10 @@ const Layout = props => {
         <div class={LayoutStyles.content}>
           <Header />
           {props.children}
+        </div>
+        <div className={LayoutStyles.socialsignup}>
+          <Social />
+          <Signup />
         </div>
         <Footer />
       </div>

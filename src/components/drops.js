@@ -60,10 +60,11 @@ const Drops = () => {
                       className={dropStyles.storelogo}
                     />
                   ) : (
-                    <h4 className={dropStyles.storeName}>
-                      {edge.node.storeName}
-                    </h4>
+                    <></>
                   )}
+                  <h4 className={dropStyles.storeName}>
+                    {edge.node.storeName}
+                  </h4>
                 </div>
               </div>
               {documentToReactComponents(

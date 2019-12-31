@@ -6,11 +6,21 @@
   min-height: 100vh;
 }
 
-.content {
+.socialsignup {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 @media only screen and (min-width: 600px) {
+  .socialsignup {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media only screen and (min-width: 900px) {
+  .socialsignup {
+    grid-template-columns: 1fr 1fr;
+  }
 }

@@ -2,9 +2,16 @@ module.exports = {
   siteMetadata: {
     title: "Constellation",
     author: "Constellation Cannabis",
+    siteUrl: `https://www.constellationcannabis.com`,
   },
 
   plugins: [
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        createLinkInHead: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
