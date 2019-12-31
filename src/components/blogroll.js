@@ -31,6 +31,7 @@ const Blogroll = () => {
     <div className={blogrollStyles.container}>
       <div className={blogrollStyles.blogrollheader}>
         <h4>Recent Blog Posts</h4>
+        <Link to="/blog">see all blogs</Link>
       </div>
       <ol className={blogrollStyles.posts}>
         {data.blog.edges.map(edge => {
