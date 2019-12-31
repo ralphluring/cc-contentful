@@ -4,7 +4,8 @@ import signupStyles from "./signupStyles.module.scss"
 const Signup = ({ open, setOpen }) => {
   return (
     <div className={signupStyles.container}>
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="signup" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="signup" />
         <div className={signupStyles.formbody}>
           <p className={signupStyles.name}>
             <label>
