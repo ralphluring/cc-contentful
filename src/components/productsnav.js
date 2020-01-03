@@ -33,15 +33,6 @@ const ProductsNav = () => {
             Prerolls
           </Link>
         </li>
-        <li className={productnavStyles.listItem}>
-          <Link
-            class={productnavStyles.link}
-            activeClassName={productnavStyles.active}
-            to="/products"
-          >
-            Products
-          </Link>
-        </li>
       </ul>
     </div>
   )
