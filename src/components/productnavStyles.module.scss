@@ -1,15 +1,21 @@
-.container * {
-  border: 1px solid #000;
-}
 .container {
   display: none;
 }
 
 @media only screen and (min-width: 600px) {
   .container {
-    background-color: chocolate;
     height: 100%;
     display: flex;
+  }
+
+  .list {
+    li {
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+      background-color: #f1fafe;
+    }
   }
 }
 

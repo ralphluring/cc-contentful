@@ -1,62 +1,84 @@
-// .container * {
-//   border: 1px solid blue;
-// }
-.container {
-  display: grid;
-}
-
-.solventless {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.image {
-  max-height: 500px;
-}
-
-h1 {
-  padding: 0;
-  margin: 0;
-}
-
-.link {
-  background-color: #000;
-  color: #fff;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 0.5rem;
-  margin: 1rem;
-}
-
 .titleandmenulink {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0.5rem;
+  justify-content: center;
+  background-color: #f1fafe;
+  margin: 1rem;
+  margin-left: 0;
+  width: 100%;
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .link {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+  }
 }
 
 p {
   margin: 1rem;
 }
 
-.picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @media only screen and (min-width: 600px) {
-  .titleandmenulink {
-    justify-content: center;
-    display: none;
-  }
-
-  .container {
-    grid-template-columns: 200px 1fr;
-  }
 }
 
 @media only screen and (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+      "sidebar main"
+      "sidebar main"
+      "sidebar main";
+  }
+
+  .titleandmenulink {
+    max-width: 450px;
+  }
+
+  .productleft {
+    justify-self: center;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+
+  .maincontent {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    p {
+      font-weight: bold;
+    }
+
+    .solventless {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: flex-end;
+    }
+
+    .flower {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: flex-end;
+    }
+
+    .prerolls {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: flex-end;
+    }
+
+    img {
+      max-width: 450px;
+    }
+  }
 }

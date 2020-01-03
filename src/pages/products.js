@@ -50,64 +50,74 @@ const ProductsPage = () => {
     <Layout>
       <Head title="Products" />
       <div className={productspageStyles.container}>
-        <ProductsNav />
-        <div className={productspageStyles.solventless}>
-          <div className={productspageStyles.productleft}>
-            <div className={productspageStyles.titleandmenulink}>
-              <h1>{data.solventless.title}</h1>
-              <Link to="/solventless" className={productspageStyles.link}>
-                See Menu
-              </Link>
+        <ProductsNav className={productspageStyles.sidebar} />
+        <div className={productspageStyles.maincontent}>
+          <div className={productspageStyles.solventless}>
+            <div className={productspageStyles.productleft}>
+              <div className={productspageStyles.titleandmenulink}>
+                <h1>{data.solventless.title}</h1>
+                <Link to="/solventless" className={productspageStyles.link}>
+                  See Menu
+                </Link>
+              </div>
+              <div className={productspageStyles.picture}>
+                <img
+                  src={
+                    data.solventless.picture.fluid.src ||
+                    data.solventless.picture.fluid.tracedSVG
+                  }
+                  alt="solventless"
+                  className={productspageStyles.image}
+                />
+              </div>
             </div>
-            <div className={productspageStyles.picture}>
-              <img
-                src={
-                  data.solventless.picture.fluid.src ||
-                  data.solventless.picture.fluid.tracedSVG
-                }
-                alt="solventless"
-                className={productspageStyles.image}
-              />
+            <div className={productspageStyles.json}>
+              {documentToReactComponents(data.solventless.description.json)}
             </div>
-          </div>
-          <div className={productspageStyles.json}>
-            {documentToReactComponents(data.solventless.description.json)}
-          </div>
-        </div>
-        <div className={productspageStyles.flower}>
-          <div className={productspageStyles.titleandmenulink}>
-            <h1>{data.flower.title}</h1>
-            <Link to="/flower" className={productspageStyles.link}>
-              See Menu
-            </Link>
-          </div>
-          <div className={productspageStyles.picture}>
-            {" "}
-            <img
-              src={data.flower.picture.fluid.src}
-              alt="flower"
-              className={productspageStyles.image}
-            />
           </div>
 
-          {documentToReactComponents(data.flower.description.json)}
-        </div>
-        <div className={productspageStyles.prerolls}>
-          <div className={productspageStyles.titleandmenulink}>
-            <h1> {data.prerolls.title}</h1>
-            <Link to="/prerolls" className={productspageStyles.link}>
-              See Menu
-            </Link>
-          </div>
-          <div className={productspageStyles.picture}>
-            <img
-              src={data.prerolls.picture.fluid.src}
-              alt="prerolls"
-              className={productspageStyles.image}
-            />
+          <div className={productspageStyles.flower}>
+            <div className={productspageStyles.productleft}>
+              <div className={productspageStyles.titleandmenulink}>
+                <h1>{data.flower.title}</h1>
+                <Link to="/flower" className={productspageStyles.link}>
+                  See Menu
+                </Link>
+              </div>
+              <div className={productspageStyles.picture}>
+                {" "}
+                <img
+                  src={data.flower.picture.fluid.src}
+                  alt="flower"
+                  className={productspageStyles.image}
+                />
+              </div>
+            </div>
+            <div className={productspageStyles.json}>
+              {documentToReactComponents(data.flower.description.json)}
+            </div>
           </div>
 
-          {documentToReactComponents(data.prerolls.description.json)}
+          <div className={productspageStyles.prerolls}>
+            <div className={productspageStyles.productleft}>
+              <div className={productspageStyles.titleandmenulink}>
+                <h1> {data.prerolls.title}</h1>
+                <Link to="/prerolls" className={productspageStyles.link}>
+                  See Menu
+                </Link>
+              </div>
+              <div className={productspageStyles.picture}>
+                <img
+                  src={data.prerolls.picture.fluid.src}
+                  alt="prerolls"
+                  className={productspageStyles.image}
+                />
+              </div>
+            </div>
+            <div className={productspageStyles.json}>
+              {documentToReactComponents(data.prerolls.description.json)}
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
