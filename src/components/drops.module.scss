@@ -2,36 +2,45 @@
   display: grid;
 }
 
+.stork {
+  font-size: 3rem;
+}
+
+.dropstitle {
+  margin-right: 3rem;
+}
+
 .drops {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0.5rem;
+  padding: 1rem;
+  background-color: #f1fafe;
 
   h1 {
     font-size: 2rem;
     margin: 0;
-    color: #fff;
+    color: #000;
   }
 
   a {
-    color: #fff;
+    color: #000;
+    font-weight: bold;
   }
 }
 
 .drop {
-  margin-top: 1rem;
-  background-color: #fff;
+  background-color: #f1fafe;
   display: grid;
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin: 1.2rem;
   color: #000;
-  border-radius: 5px;
+  box-shadow: 7px 7px 0px #000;
 
   h3 {
     text-align: center;
@@ -45,12 +54,13 @@
   p {
     margin-block-start: 0;
     margin-block-end: 0;
+    font-weight: bolder;
   }
 
   ul {
     margin-bottom: 0;
     display: grid;
-
+    list-style: none;
     align-content: center;
   }
 }
@@ -74,7 +84,6 @@
   text-align: center;
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
-  color: darkslateblue;
 }
 
 .dropday {
@@ -99,12 +108,15 @@
 
 @media only screen and (min-width: 600px) {
   .drops {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media only screen and (min-width: 900px) {
   .drops {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .container {
   }
 }

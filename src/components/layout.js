@@ -6,6 +6,7 @@ import Signup from "../components/signup"
 import SEO from "../components/SEO"
 import "../styles/index.scss"
 import LayoutStyles from "./layout.module.scss"
+import SidebarMain from "./sidebarmain"
 
 const Layout = props => {
   return (
@@ -14,7 +15,10 @@ const Layout = props => {
         <SEO />
         <div class={LayoutStyles.content}>
           <Header />
-          {props.children}
+          <SidebarMain />
+          <div className={LayoutStyles.stuff}>
+            <div className={LayoutStyles.allstuff}>{props.children}</div>
+          </div>
         </div>
         <div className={LayoutStyles.socialsignup}>
           <Social />

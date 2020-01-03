@@ -4,6 +4,7 @@ import signupStyles from "./signupStyles.module.scss"
 const Signup = ({ open, setOpen }) => {
   return (
     <div className={signupStyles.container}>
+      <h4 className={signupStyles.formheader}>Send us feedack!</h4>
       <form
         name="signup"
         method="POST"

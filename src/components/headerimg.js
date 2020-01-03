@@ -20,6 +20,7 @@ const Headerimg = () => {
       <img
         src={data.contentfulSiteHeader.siteheader.fluid.src}
         alt="siteheader"
+        className={headerimgStyles.image}
       />
     </div>
   )

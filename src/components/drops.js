@@ -2,11 +2,12 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import dropStyles from "./drops.module.scss"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { GiStorkDelivery } from "react-icons/gi"
 
 const Drops = () => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulDrop(limit: 4) {
+      allContentfulDrop(sort: { fields: dropDate, order: DESC }, limit: 3) {
         edges {
           node {
             dropDate(formatString: "MMMM DD")
@@ -43,6 +44,7 @@ const Drops = () => {
     <div className={dropStyles.container}>
       <div className={dropStyles.header}>
         <h1>Recent Drops</h1>
+
         <Link to="/drops">See All Drops</Link>
       </div>
 

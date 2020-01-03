@@ -2,17 +2,21 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: #fff;
+  background-color: #f1fafe;
+  color: #000;
+  margin-top: 1rem;
+
   h4 {
     font-family: "Nunito", sans-serif;
+    margin: 1rem;
   }
 
   a {
-    color: #fff;
+    color: #000;
+    font-weight: bold;
   }
 }
 .container {
-  margin: 1rem;
   display: grid;
 }
 
@@ -54,8 +58,8 @@ a {
 
 .post {
   display: flex;
-  border-radius: 5px;
-  background-color: #fff;
+  box-shadow: 7px 7px 0px #000;
+  background-color: #f1fafe;
   margin: 1rem;
   padding: 1rem;
 }
@@ -76,5 +80,8 @@ a {
 
   .posts {
     display: flex;
+  }
+
+  .container {
   }
 }

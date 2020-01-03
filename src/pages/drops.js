@@ -7,7 +7,7 @@ import Head from "../components/head"
 const DropPage = props => {
   const data = useStaticQuery(graphql`
     query {
-      allContentfulDrop(sort: { fields: updatedAt, order: DESC }) {
+      allContentfulDrop(sort: { fields: dropDate, order: DESC }) {
         edges {
           node {
             id
@@ -23,6 +23,7 @@ const DropPage = props => {
   return (
     <Layout>
       <Head title="Drops" />
+      <h3>DROPS </h3>
       <ol className={droppageStyles.posts}>
         {data.allContentfulDrop.edges.map(edge => {
           return (

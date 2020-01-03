@@ -1,17 +1,26 @@
 .container {
-  border: 2px solid #000;
-  border-radius: 5px;
+  background-color: #f1fafe;
   width: 300px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  box-shadow: 7px 7px 0px #000;
 
   input {
     background: none;
-    border: 1px solid #000;
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-left: 1rem;
   }
 
   textarea {
     background: none;
     border: 1px solid #000;
   }
+}
+
+.formheader {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 .name {
@@ -51,7 +60,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #000;
 }
 
 .buttoncontainer {
@@ -61,7 +69,7 @@
   border-radius: 5px;
   background-color: #000;
   button {
-    color: #fff;
+    color: #f1fafe;
     background-color: #000;
     border: none;
   }

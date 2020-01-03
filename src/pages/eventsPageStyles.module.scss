@@ -1,5 +1,6 @@
 .eventContainer {
-  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #fff;
   margin: 1rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -9,4 +10,9 @@
     padding: 0.2rem;
     margin: 0;
   }
+}
+
+.header {
+  color: #fff;
+  font-size: 2rem;
 }
