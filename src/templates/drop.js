@@ -23,11 +23,15 @@ const Drop = props => {
   return (
     <Layout>
       <Head title={props.data.contentfulDrop.storeName} />
-      <h1>{props.data.contentfulDrop.storeName}</h1>
       <div className={dropStyles.container}>
-        {documentToReactComponents(
-          props.data.contentfulDrop.productsInStock.json
-        )}
+        <div className={dropStyles.droppageheader}>
+          <h1>{props.data.contentfulDrop.storeName}</h1>
+        </div>
+        <div className={dropStyles.contentcontainer}>
+          {documentToReactComponents(
+            props.data.contentfulDrop.productsInStock.json
+          )}
+        </div>
       </div>
     </Layout>
   )

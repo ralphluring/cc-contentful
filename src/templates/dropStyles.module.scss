@@ -1,16 +1,29 @@
+.contentcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  background-color: #f1fafe;
+  margin: 1rem;
+  box-shadow: 7px 7px 0px #000;
+  padding-top: 1rem;
+}
+
 .container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #f1fafe;
+    padding: 1rem;
+  }
+}
+ul {
+  list-style: none;
+  font-weight: bolder;
 }
 
 .p {
   margin: 1rem;
-}
-
-h1 {
-  font-size: 1.5rem;
-  text-align: center;
 }
 
 h3 {

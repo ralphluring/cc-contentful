@@ -13,7 +13,7 @@ const DropPage = props => {
             id
             storeName
             slug
-            updatedAt(fromNow: true)
+            dropDate(fromNow: true)
           }
         }
       }
@@ -23,14 +23,17 @@ const DropPage = props => {
   return (
     <Layout>
       <Head title="Drops" />
-      <h3>DROPS </h3>
+      <div className={droppageStyles.dropheader}>
+        <h3>Drops </h3>
+      </div>
+
       <ol className={droppageStyles.posts}>
         {data.allContentfulDrop.edges.map(edge => {
           return (
             <li className={droppageStyles.post} key={edge.node.id}>
               <Link to={`/drops/${edge.node.slug}`}>
                 <h1>{edge.node.storeName}</h1>
-                <p>{edge.node.updatedAt}</p>
+                <p>{edge.node.dropDate}</p>
               </Link>
             </li>
           )

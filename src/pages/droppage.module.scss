@@ -2,12 +2,11 @@
   display: grid;
   grid-template-columns: 1fr;
   li {
-    border-radius: 5px;
     padding: 1rem;
     margin: 1rem;
-    background-color: #fff;
-    opacity: 0.8;
+    background-color: #f1fafe;
     max-width: 700px;
+    box-shadow: 7px 7px 0px #000;
   }
 
   a {
@@ -19,6 +18,14 @@
   h1 {
     padding: 0;
     margin: 0;
+  }
+}
+
+.dropheader {
+  background-color: #f1fafe;
+  padding: 1rem;
+  h3 {
+    font-family: "Nunito", sans-serif;
   }
 }
 
