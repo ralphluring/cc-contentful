@@ -10,6 +10,13 @@ module.exports = {
 
   plugins: [
     {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        type: `hashtag`,
+        hashtag: `constellationcannabis`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         createLinkInHead: true,
