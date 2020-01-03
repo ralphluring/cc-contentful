@@ -6,7 +6,7 @@ import textlogosStyles from "./textlogo.module.scss"
 const Textlogo = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/cc_logo_mobileweb-02.png" }) {
+      file(relativePath: { eq: "images/cc_logo_mobileweb-white-02.png" }) {
         childImageSharp {
           fixed(width: 300) {
             ...GatsbyImageSharpFixed

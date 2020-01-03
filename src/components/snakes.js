@@ -6,7 +6,7 @@ import snakeStyles from "./snakes.module.scss"
 const Snakes = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "images/cc_logo_mobileweb-01.png" }) {
+      file(relativePath: { eq: "images/cc_logo_mobileweb-white-01.png" }) {
         childImageSharp {
           fixed(width: 100) {
             ...GatsbyImageSharpFixed

@@ -54,10 +54,10 @@ const Blogroll = () => {
                 </div>
                 {}
                 <p>
-                  {edge.node.body.json.content[0].content[0].value.slice(
+                  {`${edge.node.body.json.content[0].content[0].value.slice(
                     0,
-                    200
-                  )}
+                    100
+                  )}...`}
                 </p>
 
                 <Link to={`/blog/${edge.node.slug}`}>read full post</Link>

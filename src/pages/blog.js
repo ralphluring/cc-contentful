@@ -26,7 +26,7 @@ const BlogPage = props => {
     <Layout>
       <Head title="Blog" />
       <div className={blogStyles.blogheader}>
-        <h3>BLOG</h3>
+        <h3>Blog</h3>
       </div>
 
       <ol className={blogStyles.posts}>

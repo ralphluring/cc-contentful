@@ -9,6 +9,7 @@ const InstaRoll = () => {
       allInstaNode(limit: 8) {
         edges {
           node {
+            original
             caption
             id
             localFile {
@@ -42,7 +43,7 @@ const InstaRoll = () => {
                 <img src={edge.node.localFile.childImageSharp.fixed.src}></img>
               </div>
               <p className={instarollStyles.caption}>
-                {edge.node.caption.slice(0, 200)}
+                {`${edge.node.caption.slice(0, 200)} ...`}
               </p>
             </div>
           )
