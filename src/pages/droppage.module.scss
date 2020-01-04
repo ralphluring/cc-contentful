@@ -1,23 +1,30 @@
 .posts {
   display: grid;
   grid-template-columns: 1fr;
+
   li {
-    padding: 1rem;
     margin: 1rem;
     background-color: #f1fafe;
     max-width: 700px;
     box-shadow: 7px 7px 0px #000;
   }
 
-  a {
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-  }
+  .post {
+    p {
+      text-align: center;
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      padding: 0;
+      margin: 0;
+    }
 
-  h1 {
-    padding: 0;
-    margin: 0;
+    h1 {
+      font-size: 1.5rem;
+      padding-top: 0.5rem;
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -26,12 +33,6 @@
   h3 {
     font-family: "Nunito", sans-serif;
     font-size: 3rem;
-  }
-}
-
-.post {
-  p {
-    text-align: center;
   }
 }
 
@@ -44,5 +45,11 @@
 @media only screen and (min-width: 900px) {
   .posts {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .posts {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }

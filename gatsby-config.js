@@ -12,8 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        type: `hashtag`,
-        hashtag: `constellationcannabis`,
+        username: `constellationcannabis`,
       },
     },
     {

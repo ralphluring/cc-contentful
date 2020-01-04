@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa"
 const InstaRoll = () => {
   const data = useStaticQuery(graphql`
     query {
-      allInstaNode(limit: 8) {
+      allInstaNode(limit: 4) {
         edges {
           node {
             original
@@ -30,7 +30,7 @@ const InstaRoll = () => {
       <div className={instarollStyles.instarollheader}>
         <a href="https://www.instagram.com/constellationcannabis">
           <div className={instarollStyles.titleandlink}>
-            <h1> #ConstellationCannabis</h1>
+            <h1> Find us on Instagram</h1>
             <FaInstagram className={instarollStyles.instaicon} />
           </div>
         </a>
