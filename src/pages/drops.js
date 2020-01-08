@@ -13,7 +13,7 @@ const DropPage = props => {
             id
             storeName
             slug
-
+            address
             dropDate(fromNow: true)
             storeLogo {
               fixed {
@@ -37,15 +37,13 @@ const DropPage = props => {
         {data.allContentfulDrop.edges.map(edge => {
           return (
             <li className={droppageStyles.post} key={edge.node.id}>
-              {edge.node.storeLogo !== null ? (
-                <img
-                  src={edge.node.storeLogo.fixed.src}
-                  alt="store logo"
-                  className={droppageStyles.storelogo}
-                />
-              ) : (
-                <></>
-              )}
+              <div className={droppageStyles.storelogo}>
+                {edge.node.storeLogo !== null ? (
+                  <img src={edge.node.storeLogo.fixed.src} alt="store logo" />
+                ) : (
+                  <></>
+                )}
+              </div>
               <Link to={`/drops/${edge.node.slug}`}>
                 <h1>{edge.node.storeName}</h1>
                 <p>{edge.node.dropDate}</p>

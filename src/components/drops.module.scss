@@ -2,10 +2,6 @@
   display: grid;
 }
 
-.stork {
-  font-size: 3rem;
-}
-
 .dropstitle {
   margin-right: 3rem;
 }
@@ -94,6 +90,7 @@
 
 .storelogo {
   margin: 0;
+  display: hidden;
 }
 
 #container {

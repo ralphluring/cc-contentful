@@ -2,6 +2,13 @@
   height: 300px;
 }
 
+.popup {
+  a {
+    font-size: 1rem;
+    color: #000;
+  }
+}
+
 @media only screen and (min-width: 600px) {
   .container {
     height: 400px;

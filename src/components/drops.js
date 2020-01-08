@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import dropStyles from "./drops.module.scss"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { GiStorkDelivery } from "react-icons/gi"
 
 const Drops = () => {
   const data = useStaticQuery(graphql`

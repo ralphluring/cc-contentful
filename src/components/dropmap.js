@@ -10,11 +10,13 @@ const Dropmap = props => {
       allContentfulDrop {
         edges {
           node {
+            address
             storeName
             storeLocation {
               lat
               lon
             }
+            websitelink
           }
         }
         totalCount
@@ -42,8 +44,11 @@ const Dropmap = props => {
                 className={dropmapStyles.marker}
                 position={edge.node.storeLocation}
               >
-                <Popup>
-                  <h3>{edge.node.storeName}</h3>
+                <Popup className={dropmapStyles.popup}>
+                  <a href={edge.node.websitelink} target="_blank">
+                    {edge.node.storeName}
+                  </a>
+                  <p>{edge.node.address}</p>
                 </Popup>
               </Marker>
             )

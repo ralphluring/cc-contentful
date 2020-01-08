@@ -9,6 +9,24 @@
   max-width: 500px;
 }
 
+.droppageheader {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  a {
+    text-align: center;
+  }
+}
+
 .container {
   display: grid;
   justify-items: center;

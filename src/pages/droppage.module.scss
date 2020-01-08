@@ -12,7 +12,8 @@
   .post {
     p {
       text-align: center;
-      margin: 0;
+      margin: 0.2rem;
+      font-size: 1.5rem;
     }
     a {
       text-decoration: none;
@@ -22,10 +23,19 @@
 
     h1 {
       font-size: 1.5rem;
-      padding-top: 0.5rem;
       margin-bottom: 0;
     }
+
+    img {
+      margin: 0;
+      max-width: 80px;
+    }
   }
+}
+
+.storelogo {
+  display: flex;
+  justify-content: center;
 }
 
 .dropheader {

@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import "../styles/index.scss"
 import dropStyles from "./dropStyles.module.scss"
+import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 
 import Head from "../components/head"
 
@@ -13,12 +14,19 @@ export const query = graphql`
       updatedAt
       slug
       storeName
+      address
+      websitelink
+      storeLocation {
+        lat
+        lon
+      }
       productsInStock {
         json
       }
     }
   }
 `
+
 const Drop = props => {
   return (
     <Layout>
@@ -26,6 +34,10 @@ const Drop = props => {
       <div className={dropStyles.container}>
         <div className={dropStyles.droppageheader}>
           <h1>{props.data.contentfulDrop.storeName}</h1>
+          <p>{props.data.contentfulDrop.address}</p>
+          <a href={props.data.contentfulDrop.websitelink} target="_blank">
+            visit their website
+          </a>
         </div>
         <div className={dropStyles.contentcontainer}>
           {documentToReactComponents(
