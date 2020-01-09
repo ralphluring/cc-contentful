@@ -33,8 +33,8 @@ const Vapeproduct = props => {
       <Head title={props.data.contentfulVapePenProduct.title} />
       <h1>{props.data.contentfulVapePenProduct.title}</h1>
 
-      <div className={vapeproductStyles.productcontainer}>
-        <div className={vapeproductStyles.description}>
+      <div className={vapeproducttemplateStyles.productcontainer}>
+        <div className={vapeproducttemplateStyles.description}>
           <p>{props.data.contentfulVapePenProduct.description}</p>
           <a href={pdf} target="_blank" rel="noopener noreferrer">
             See Test Results
