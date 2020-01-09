@@ -28,6 +28,7 @@ const Dropmap = props => {
     return (
       <>
         <Head />
+
         <Map
           className={dropmapStyles.container}
           center={[47.6062, -122.3321]}
@@ -45,7 +46,11 @@ const Dropmap = props => {
                 position={edge.node.storeLocation}
               >
                 <Popup className={dropmapStyles.popup}>
-                  <a href={edge.node.websitelink} target="_blank">
+                  <a
+                    href={edge.node.websitelink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {edge.node.storeName}
                   </a>
                   <p>{edge.node.address}</p>

@@ -1,5 +1,5 @@
 import React from "react"
-import { FaInstagram } from "react-icons/fa"
+
 import socialStyles from "./socialStyles.module.scss"
 import InstaRoll from "./instaroll"
 

@@ -25,25 +25,25 @@ const Signup = ({ open, setOpen }) => {
             </label>
           </p>
           <div className={signupStyles.productcontainer}>
-            <p>Favorite Product</p>
+            <p className={signupStyles.title}>Favorite Product</p>
 
-            <div>
+            <div className={signupStyles.field}>
+              <p>Flower</p>
               <input type="radio" id="flower" name="signup" value="flower" />
-              <label for="flower">Flower</label>
             </div>
 
-            <div>
+            <div className={signupStyles.field}>
+              <p>Hash</p>
               <input type="radio" id="hash" name="signup" value="hash" />
-              <label for="hash">Hash</label>
             </div>
 
-            <div>
+            <div className={signupStyles.field}>
+              <p>Preroll</p>
               <input type="radio" id="preroll" name="signup" value="preroll" />
-              <label for="preroll">Pre-roll</label>
             </div>
-            <div>
+            <div className={signupStyles.field}>
+              <p>Vape</p>
               <input type="radio" id="vape" name="signup" value="vape" />
-              <label for="vape">Vape</label>
             </div>
           </div>
           <p className={signupStyles.feedbackcontainer}>

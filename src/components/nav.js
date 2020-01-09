@@ -59,6 +59,7 @@ const Nav = ({ open, setOpen }) => {
             activeClassName={navStyles.active}
             href="http://www.snakeswag.com"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Merch
           </a>

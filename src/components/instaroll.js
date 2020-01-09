@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import instarollStyles from "./instaroll.module.scss"
 import { FaInstagram } from "react-icons/fa"
 
@@ -40,7 +40,10 @@ const InstaRoll = () => {
           return (
             <div className={instarollStyles.postcontainer}>
               <div className={instarollStyles.postimg}>
-                <img src={edge.node.localFile.childImageSharp.fixed.src}></img>
+                <img
+                  src={edge.node.localFile.childImageSharp.fixed.src}
+                  alt="insta post"
+                ></img>
               </div>
               <p className={instarollStyles.caption}>
                 {`${edge.node.caption.slice(0, 200)} ...`}

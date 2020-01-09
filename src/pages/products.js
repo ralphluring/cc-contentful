@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import ProductsNav from "../components/productsnav"
 import productspageStyles from "./productspageStyles.module.scss"
