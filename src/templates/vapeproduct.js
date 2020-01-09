@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import vapeproductStyles from "./vapeproductStyles.module.scss"
+import vapeproducttemplateStyles from "./vapeproducttemplatestyles.module.scss"
 
 export const query = graphql`
   query($slug: String!) {
