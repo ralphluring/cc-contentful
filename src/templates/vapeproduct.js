@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
+import vapeproductStyles from "./vapeproductStyles.module.scss"
 
 export const query = graphql`
   query($slug: String!) {
@@ -31,16 +32,12 @@ const Vapeproduct = props => {
     <Layout>
       <Head title={props.data.contentfulVapePenProduct.title} />
       <h1>{props.data.contentfulVapePenProduct.title}</h1>
-      <img
-        src={props.data.contentfulVapePenProduct.picture.fluid.src}
-        alt="solventless vape cart"
-      />
-      <div>
-        <div>
-          <p>{props.data.contentfulVapePenProduct.description}</p>
 
+      <div className={vapeproductStyles.productcontainer}>
+        <div className={vapeproductStyles.description}>
+          <p>{props.data.contentfulVapePenProduct.description}</p>
           <a href={pdf} target="_blank" rel="noopener noreferrer">
-            Download coa
+            See Test Results
           </a>
         </div>
       </div>

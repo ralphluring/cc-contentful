@@ -45,7 +45,7 @@ const Shoproduct = props => {
           <p>{props.data.contentfulShoProduct.description}</p>
 
           <a href={pdf} target="_blank" rel="noopener noreferrer">
-            Download coa
+            See Test results
           </a>
         </div>
       </div>

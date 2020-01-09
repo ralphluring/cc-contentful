@@ -4,7 +4,7 @@ module.exports = {
     author: "Constellation Cannabis",
     siteUrl: `https://www.constellationcannabis.com`,
     description:
-      "Premium quality Solventless Hash, Indoor flower, infused prerolls, and vape cartridges. In retail stores throughout Washington state.  ",
+      "Premium quality Solventless Hash, Indoor flower, solventless infused prerolls, and solventless vape cartridges. In retail stores throughout Washington state.  ",
     image: "/images/cc_logo_mobile-01.png", // Path to your image you placed in the 'static' folder
   },
 

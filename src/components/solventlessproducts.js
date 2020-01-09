@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import solventlessproductStyles from "./solventlessproductStyles.module.scss"
 
 const SolventlessProducts = () => {
   const data = useStaticQuery(graphql`
@@ -22,15 +23,21 @@ const SolventlessProducts = () => {
   `)
 
   return (
-    <div>
+    <div className={solventlessproductStyles.container}>
       <div>
         <h1>Solventless Hash Oil</h1>
       </div>
-      {data.allContentfulShoProduct.edges.map(edge => {
-        return (
-          <Link to={`solventless/${edge.node.slug}`}>{edge.node.title}</Link>
-        )
-      })}
+      <div className={solventlessproductStyles.productscontainer}>
+        {data.allContentfulShoProduct.edges.map(edge => {
+          return (
+            <div className={solventlessproductStyles.product}>
+              <Link to={`solventless/${edge.node.slug}`}>
+                {edge.node.title}
+              </Link>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }
