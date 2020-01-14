@@ -9,8 +9,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <Headerimg />
+
       <Drops />
       {typeof window !== `undefined` ? <Dropmap /> : null}
+
       <Blogroll />
     </Layout>
   )
