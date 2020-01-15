@@ -1,74 +1,18 @@
-.titleandlink {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 2rem;
-
-  h1 {
-    font-size: 1rem;
-    margin: 0;
-  }
-
+.container {
   .instaicon {
-    font-size: 6rem;
+    font-size: 2rem;
   }
-}
-
-.caption {
-  font-weight: bold;
-  max-width: 400px;
-}
-
-.postimg {
-  display: flex;
-  justify-content: center;
-  img {
-    max-height: 300px;
-  }
-}
-
-.posts {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  margin-left: 1rem;
-}
-
-@media only screen and (min-width: 600px) {
-  .posts {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-@media only screen and (min-width: 1300px) {
-  .instaicon {
-    font-size: 8rem;
-  }
-
-  .titleandlink {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2rem;
-
-    h1 {
-      font-size: 2rem;
-      margin: 0;
+  .instarollheader {
+    .titleandlink {
+      display: flex;
+      justify-content: center;
     }
   }
 
   .posts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .postcontainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    .postimg {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    margin: 1rem;
+    .post {
     }
   }
 }

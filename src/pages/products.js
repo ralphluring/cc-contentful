@@ -59,16 +59,6 @@ const ProductsPage = () => {
                   See Menu
                 </Link>
               </div>
-              <div className={productspageStyles.picture}>
-                <img
-                  src={
-                    data.solventless.picture.fluid.src ||
-                    data.solventless.picture.fluid.tracedSVG
-                  }
-                  alt="solventless"
-                  className={productspageStyles.image}
-                />
-              </div>
             </div>
             <div className={productspageStyles.json}>
               {documentToReactComponents(data.solventless.description.json)}

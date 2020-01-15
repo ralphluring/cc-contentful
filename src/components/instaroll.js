@@ -30,7 +30,7 @@ const InstaRoll = () => {
       <div className={instarollStyles.instarollheader}>
         <a href="https://www.instagram.com/constellationcannabis">
           <div className={instarollStyles.titleandlink}>
-            <h1> Find us on Instagram</h1>
+            <h1> Instagram</h1>
             <FaInstagram className={instarollStyles.instaicon} />
           </div>
         </a>
@@ -38,16 +38,11 @@ const InstaRoll = () => {
       <div className={instarollStyles.posts}>
         {data.allInstaNode.edges.map(edge => {
           return (
-            <div className={instarollStyles.postcontainer}>
-              <div className={instarollStyles.postimg}>
-                <img
-                  src={edge.node.localFile.childImageSharp.fixed.src}
-                  alt="insta post"
-                ></img>
-              </div>
-              <p className={instarollStyles.caption}>
-                {`${edge.node.caption.slice(0, 200)} ...`}
-              </p>
+            <div className={instarollStyles.post}>
+              <img
+                src={edge.node.localFile.childImageSharp.fixed.src}
+                alt="insta post"
+              ></img>
             </div>
           )
         })}
