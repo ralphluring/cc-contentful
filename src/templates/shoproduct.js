@@ -50,15 +50,6 @@ const Shoproduct = props => {
         </div>
 
         <div className={shoproductStyles.description}>
-          <div className={shoproductStyles.datacontainer}>
-            <p>THC</p>
-
-            <div className={shoproductStyles.terpeneprofile}>
-              <animated.svg className={shoproductStyles.thc}>
-                {aprops.number}
-              </animated.svg>
-            </div>
-          </div>
           <p>{props.data.contentfulShoProduct.description}</p>
 
           <a href={pdf} target="_blank" rel="noopener noreferrer">
