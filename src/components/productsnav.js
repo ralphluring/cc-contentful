@@ -19,7 +19,7 @@ const ProductsNav = () => {
           <Link
             class={productnavStyles.link}
             activeClassName={productnavStyles.active}
-            to="/drops"
+            to="/flower"
           >
             Flower
           </Link>
@@ -28,7 +28,7 @@ const ProductsNav = () => {
           <Link
             class={productnavStyles.link}
             activeClassName={productnavStyles.active}
-            to="/blog"
+            to="/prerolls"
           >
             Prerolls
           </Link>
