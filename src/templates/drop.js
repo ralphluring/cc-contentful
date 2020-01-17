@@ -29,7 +29,6 @@ export const query = graphql`
 `
 
 const Drop = props => {
-  const zoom = 7
   return (
     <Layout>
       <Head title={props.data.contentfulDrop.storeName} />

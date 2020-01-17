@@ -5,7 +5,7 @@ import singledropmap from "./singledropmap.module.scss"
 import Head from "../components/head"
 
 const Singledropmap = props => {
-  const zoom = 18
+  const zoom = 12
   if (typeof window !== `undefined`) {
     return (
       <>
