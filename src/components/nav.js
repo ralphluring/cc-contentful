@@ -35,15 +35,7 @@ const Nav = ({ open, setOpen }) => {
             Blog
           </Link>
         </li>
-        <li className={navStyles.listItem}>
-          <Link
-            class={navStyles.link}
-            activeClassName={navStyles.active}
-            to="/products"
-          >
-            Products
-          </Link>
-        </li>
+
         <li className={navStyles.listItem}>
           <Link
             class={navStyles.link}

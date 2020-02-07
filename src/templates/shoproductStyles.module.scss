@@ -7,6 +7,27 @@
   justify-content: center;
 }
 
+.thc {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  margin: 1rem;
+
+  p {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+.terps {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  margin: 1rem;
+
+  p {
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
 .description {
   display: flex;
   flex-direction: column;

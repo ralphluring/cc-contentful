@@ -1,32 +1,12 @@
-.titleandmenulink {
-  display: flex;
-  justify-content: center;
-  background-color: #f1fafe;
+.productcontainer {
+  display: grid;
+  grid-template-columns: 1fr;
   margin: 1rem;
-  margin-left: 0;
-  width: 100%;
-  h1 {
-    font-size: 2rem;
-    margin: 0;
-    margin-right: 1rem;
-    display: flex;
-    align-items: center;
+
+  .json {
+    background-color: #fff;
+    padding: 1rem;
   }
-
-  .link {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    margin: 1rem;
-  }
-}
-
-a {
-  color: #000;
-}
-
-p {
-  margin: 1rem;
 }
 
 @media only screen and (min-width: 600px) {
@@ -42,14 +22,6 @@ p {
       "sidebar main";
   }
 
-  .titleandmenulink {
-    max-width: 450px;
-  }
-
-  .productleft {
-    justify-self: center;
-  }
-
   .sidebar {
     grid-area: sidebar;
   }
@@ -59,18 +31,13 @@ p {
     display: grid;
     grid-template-columns: 1fr;
 
-    p {
-      font-weight: bold;
-    }
-
-    .solventless {
-      display: grid;
+    .productcontainer {
       grid-template-columns: 1fr;
     }
 
     .flower {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       justify-content: flex-end;
     }
 
