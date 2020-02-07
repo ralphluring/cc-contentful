@@ -33,15 +33,7 @@ const SidebarMain = ({ open, setOpen }) => {
             Blog
           </Link>
         </li>
-        <li className={sidebarmainStyles.listItem}>
-          <Link
-            class={sidebarmainStyles.link}
-            activeClassName={sidebarmainStyles.active}
-            to="/products"
-          >
-            Products
-          </Link>
-        </li>
+
         <li className={sidebarmainStyles.listItem}>
           <Link
             class={sidebarmainStyles.link}
