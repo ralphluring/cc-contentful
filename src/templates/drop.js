@@ -47,7 +47,7 @@ const Drop = props => {
         <div className={dropStyles.contentcontainer}>
           <div className={dropStyles.dropcontentcontainer}>
             {documentToReactComponents(
-              props.data.contentfulDrop.productsInStock.json
+              props.data.contentfulDrop.productsInStock
             )}
           </div>
           <Singledropmap
