@@ -48,7 +48,7 @@ const Drop = props => {
           <div className={dropStyles.dropcontentcontainer}>
             {props.data.contentfulDrop.productsInStock ? (
               documentToReactComponents(
-                props.data.contentfulDrop.productsInStock
+                props.data.contentfulDrop.productsInStock.json
               )
             ) : (
               <></>
