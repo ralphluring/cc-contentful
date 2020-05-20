@@ -30,7 +30,7 @@ const DropPage = props => {
     <Layout>
       <Head title="Drops" />
       <div className={droppageStyles.dropheader}>
-        <h3>Drops </h3>
+        <h4>Drops </h4>
       </div>
 
       <ol className={droppageStyles.posts}>
