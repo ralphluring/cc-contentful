@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.button {
+  color: rgb(218, 208, 208);
+  align-self: center;
+  font-size: 3rem;
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 900px) {
+  .container {
+    display: none;
+  }
+}

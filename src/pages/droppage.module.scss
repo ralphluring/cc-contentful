@@ -1,67 +1,68 @@
-.posts {
-  display: grid;
-  grid-template-columns: 1fr;
-
-  li {
-    margin: 1rem;
-    background-color: #f1fafe;
-    max-width: 700px;
-    box-shadow: 7px 7px 0px #000;
-  }
-
-  .post {
-    p {
-      text-align: center;
-      margin: 0.2rem;
-      font-size: 1.5rem;
-    }
-    a {
-      text-decoration: none;
-      padding: 0;
-      margin: 0;
-      color: #000;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-      margin-bottom: 0;
-    }
-
-    img {
-      margin: 0;
-      max-width: 100%;
-      max-height: 80px;
-    }
-  }
-}
-
-.storelogo {
-  display: flex;
-  justify-content: center;
-}
-
 .dropheader {
-  padding: 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+
+  margin: 0;
+  padding: 0;
   h3 {
-    font-family: "Nunito", sans-serif;
-    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  a {
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    color: #fff;
+  }
+}
+
+.posts {
+  list-style: none;
+  padding: 0;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: 80% 1fr;
+  align-items: center;
+  background-color: #161624;
+
+  a {
+    text-decoration: none;
+  }
+  h2 {
+    color: rgb(218, 208, 208);
+    font-size: 1rem;
+    padding: 5px;
+    text-decoration: underline;
+  }
+
+  h5 {
+    color: rgb(218, 208, 208);
+  }
+}
+.post:nth-child(even) {
+  background-color: #c49c43;
+
+  h5 {
+    color: #161624;
+  }
+
+  h2 {
+    color: #161624;
   }
 }
 
 @media only screen and (min-width: 600px) {
-  .posts {
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
 @media only screen and (min-width: 900px) {
-  .posts {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 }
 
 @media only screen and (min-width: 1200px) {
-  .posts {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  }
 }

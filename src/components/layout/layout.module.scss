@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 300px 100px auto 100px;
+  justify-items: center;
+  background-color: #161624;
+}
+
+.container * {
+}
+
+@media only screen and (min-width: 600px) {
+}
+
+@media only screen and (min-width: 900px) {
+}

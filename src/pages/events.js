@@ -1,10 +1,9 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout from "../components/layout/index"
 import Head from "../components/head"
 import { graphql, useStaticQuery } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
-import eventsPageStyles from "./eventsPageStyles.module.scss"
+import eventsStyles from "./events.module.scss"
 
 const EventPage = props => {
   const data = useStaticQuery(graphql`
@@ -25,13 +24,12 @@ const EventPage = props => {
   return (
     <Layout>
       <Head title="Events" />
-      <div className={eventsPageStyles.container}>
-        <div className={eventsPageStyles.header}>
-          <h1>Events</h1>
-        </div>
+      <div className={eventsStyles.container}>
+        <h1>Events</h1>
+
         {data.allContentfulEvent.edges.map(edge => {
           return (
-            <div className={eventsPageStyles.eventContainer}>
+            <div className={eventsStyles.eventContainer}>
               <p>{edge.node.date}</p>
               <h4> {edge.node.title}</h4>
 

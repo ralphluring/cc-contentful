@@ -1,0 +1,49 @@
+.container {
+  background-color: #c49c43;
+  h3 {
+    padding-left: 3rem;
+  }
+  ul {
+    padding-left: 5rem;
+  }
+}
+
+.header {
+  display: grid;
+
+  align-items: center;
+
+  h1 {
+    color: #161624;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  a {
+    color: #fff;
+    background-color: #161624;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.links {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  a {
+    text-decoration: none;
+  }
+}
+
+.drop {
+  color: #161624;
+  border-bottom: 2px solid #161624;
+}
+
+.dropheader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}

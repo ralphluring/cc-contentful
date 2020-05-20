@@ -1,0 +1,32 @@
+.container {
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.post {
+  img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+.socialheader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+
+  h4 {
+    color: #fff;
+  }
+}
+
+.instaicon {
+  font-size: 3rem;
+  color: #fff;
+}
